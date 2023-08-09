@@ -13,8 +13,12 @@
 	},
 	// enable Nvidia GPU
 	"hostRequirements": {
-		"gpu": true
+		"gpu": "optional" 
 	},
+	"runArgs": [
+		"--gpus",
+		"all"
+	],
 	// Use this environment variable if you need to bind mount your local source code into a new container.
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
